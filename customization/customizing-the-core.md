@@ -157,7 +157,7 @@ When you look at Solidus' source code, you will notice that `Spree::Product` alr
 #
 # @return [Boolean] true if this product is available
 def available?
-  deleted? && available_on&.past? && !discontinued?
+  !deleted? && available_on&.past? && !discontinued?
 end
 ```
 
